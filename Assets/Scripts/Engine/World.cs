@@ -6,6 +6,7 @@ public class World : MonoBehaviour
 {
     public BoolData simulate;
     public FloatData gravity;
+    public FloatData gravitation;
     public FloatData fixedFps;
     public StringData fpsText;
 
@@ -37,6 +38,11 @@ public class World : MonoBehaviour
         fpsText.value = "FPS: " + fpsAverage.ToString("F1");
 
         if (!simulate.value) return;
+
+        GravitationalForce.ApplyForce(bodies, gravitation.value);
+
+        bodies.ForEach(body => body.shape.color = Color.red);
+
         timeAccumulator += dt;
         while (timeAccumulator >= fixedDeltaTime) 
         { 
@@ -47,5 +53,6 @@ public class World : MonoBehaviour
 
         bodies.ForEach(body => body.force = Vector2.zero);
         bodies.ForEach(body => body.acceleration = Vector2.zero);
+
     }
 }

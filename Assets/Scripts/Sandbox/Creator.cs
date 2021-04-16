@@ -10,10 +10,15 @@ public class Creator : Action
     public FloatData size;
     public FloatData density;
 
+
+    bool action { get; set; } = false;
+    bool onetime { get; set; } = false;
+
     void Update()
     {
-        if (action)
+        if (action && (onetime || Input.GetKey(KeyCode.LeftControl)))
         {
+            onetime = false;
             Vector2 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             GameObject gameobject = Instantiate(original, position, Quaternion.identity);
@@ -21,7 +26,7 @@ public class Creator : Action
             {
                 Vector2 force = Random.insideUnitSphere.normalized * speed;
 
-                body.AddForce(force); //, Body.eForceMode.Velocity);
+                body.AddForce(force, Body.eForceMode.Velocity);
                 body.damping = damping; ;
                 body.shape.size = size;
                 body.shape.density = density;
@@ -30,11 +35,10 @@ public class Creator : Action
         }
     }
 
-    bool action { get; set; } = false;
-
     public override void StartAction()
     {
         action = true;
+        onetime = true;
     }
 
     public override void StopAction()

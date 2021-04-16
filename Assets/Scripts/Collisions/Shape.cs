@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public abstract class Shape : MonoBehaviour
 {
     public enum eType
@@ -16,4 +17,13 @@ public abstract class Shape : MonoBehaviour
 
     public float density { get; set; } = 1;
 
+    public Color color { set => spriteRenderer.material.color = value; }
+
+
+    SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 }
