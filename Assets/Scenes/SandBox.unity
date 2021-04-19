@@ -146,6 +146,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1118025165896710594, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_text
+      value: FixedFps
+      objectReference: {fileID: 0}
     - target: {fileID: 2844838135663622316, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -153,6 +157,18 @@ PrefabInstance:
     - target: {fileID: 3679613100893848905, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_Name
       value: FixedFps
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_MaxValue
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_MinValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5118119475405561532, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_Pivot.x
@@ -259,6 +275,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1118025165896710594, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_text
+      value: Gravitation
+      objectReference: {fileID: 0}
     - target: {fileID: 2844838135663622316, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -266,6 +286,10 @@ PrefabInstance:
     - target: {fileID: 3679613100893848905, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_Name
       value: Gravitation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_MaxValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5118119475405561532, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_Pivot.x
@@ -511,6 +535,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1118025165896710594, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_text
+      value: Density
+      objectReference: {fileID: 0}
     - target: {fileID: 2844838135663622316, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -518,6 +546,18 @@ PrefabInstance:
     - target: {fileID: 3679613100893848905, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_Name
       value: Density
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_Value
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_MaxValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_MinValue
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5118119475405561532, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_Pivot.x
@@ -924,6 +964,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1118025165896710594, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_text
+      value: Size
+      objectReference: {fileID: 0}
     - target: {fileID: 2844838135663622316, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -931,6 +975,18 @@ PrefabInstance:
     - target: {fileID: 3679613100893848905, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_Name
       value: Size
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_Value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_MaxValue
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
+      propertyPath: m_MinValue
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5118119475405561532, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_Pivot.x
@@ -1299,11 +1355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_MaxValue
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3816925492106970723, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_MinValue
-      value: -10
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 5118119475405561532, guid: e9e0395a7509cc548a28befbca4ba8b5, type: 3}
       propertyPath: m_Pivot.x
@@ -1422,7 +1478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e85910a276fe54cb1978a9816fccf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  original: {fileID: 3969199283109664915, guid: 7d77df5bf89926b488eadafc59a42aee, type: 3}
+  original: {fileID: 4953651089106232416, guid: 8a3f9de643ad3dd4fb970c1b8ba1b6f5, type: 3}
   speed: {fileID: 11400000, guid: 90ada9b26a165a3459f833ef32f6912f, type: 2}
   damping: {fileID: 11400000, guid: 5d93531f305e3db4a9f09a24f2b59209, type: 2}
   size: {fileID: 11400000, guid: 87b165f62522334449cbfe573fd9c0a2, type: 2}
@@ -1537,14 +1593,14 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: -14.52
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
-  m_ReverseArrangement: 1
+  m_ReverseArrangement: 0
 --- !u!114 &1892542767
 MonoBehaviour:
   m_ObjectHideFlags: 0

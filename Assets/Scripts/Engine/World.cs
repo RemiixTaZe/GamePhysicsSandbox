@@ -41,13 +41,17 @@ public class World : MonoBehaviour
 
         GravitationalForce.ApplyForce(bodies, gravitation.value);
 
-        bodies.ForEach(body => body.shape.color = Color.red);
 
         timeAccumulator += dt;
         while (timeAccumulator >= fixedDeltaTime) 
         { 
             bodies.ForEach(body => body.Step(fixedDeltaTime));
             bodies.ForEach(body => Integrator.SemiImplicitEuler(body, fixedDeltaTime));
+
+            bodies.ForEach(body => body.shape.color = Color.white);
+            Collision.CreateContacts(bodies, out List<Contact> contacts);
+            contacts.ForEach(contact => { contact.bodyA.shape.color = Color.red; contact.bodyB.shape.color = Color.red; });
+
             timeAccumulator = timeAccumulator - fixedDeltaTime; 
         }
 
