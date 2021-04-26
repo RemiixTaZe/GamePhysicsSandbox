@@ -15,6 +15,7 @@ public class World : MonoBehaviour
     private Vector2 size;
     public Vector2 Gravity { get { return new Vector2(0, gravity.value); } }
     public List<Body> bodies { get; set; } = new List<Body>();
+    public List<Spring> springs { get; set; } = new List<Spring>();
 
     float fixedDeltaTime { get { return 1.0f / fixedFps.value; } }
     float fps = 0;
@@ -44,7 +45,7 @@ public class World : MonoBehaviour
         if (!simulate.value) return;
 
         GravitationalForce.ApplyForce(bodies, gravitation.value);
-
+        springs.ForEach(spring => spring.ApplyForce());
 
         timeAccumulator += dt;
         while (timeAccumulator >= fixedDeltaTime) 
