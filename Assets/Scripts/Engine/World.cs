@@ -5,11 +5,14 @@ using UnityEngine;
 public class World : MonoBehaviour
 {
     public BoolData simulate;
+    public BoolData collision;
+    public BoolData wrap;
     public FloatData gravity;
     public FloatData gravitation;
     public FloatData fixedFps;
     public StringData fpsText;
 
+    private Vector2 size;
     public Vector2 Gravity { get { return new Vector2(0, gravity.value); } }
     public List<Body> bodies { get; set; } = new List<Body>();
 
@@ -26,6 +29,7 @@ public class World : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        size = Camera.main.ViewportToWorldPoint(Vector2.one);
     }
 
     void Update()
@@ -49,11 +53,19 @@ public class World : MonoBehaviour
             bodies.ForEach(body => Integrator.SemiImplicitEuler(body, fixedDeltaTime));
 
             bodies.ForEach(body => body.shape.color = Color.white);
-            Collision.CreateContacts(bodies, out List<Contact> contacts);
-            contacts.ForEach(contact => { contact.bodyA.shape.color = Color.red; contact.bodyB.shape.color = Color.red; });
-            ContactSolver.Resolve(contacts);
+            if(collision)
+            {
+                Collision.CreateContacts(bodies, out List<Contact> contacts);
+                contacts.ForEach(contact => { contact.bodyA.shape.color = Color.red; contact.bodyB.shape.color = Color.red; });
+                ContactSolver.Resolve(contacts);
+            }
 
             timeAccumulator = timeAccumulator - fixedDeltaTime; 
+        }
+
+        if (wrap) 
+        { 
+            bodies.ForEach(body => body.position = Utilities.Wrap(body.position, -size, size));
         }
 
         bodies.ForEach(body => body.force = Vector2.zero);

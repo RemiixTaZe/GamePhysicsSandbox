@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3fe578fc8c71ae40a56b4c3fa60a42c, type: 3}
   m_Name: BodyEnum
   m_EditorClassIdentifier: 
-  value: 0
+  value: 2

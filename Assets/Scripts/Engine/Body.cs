@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Body : MonoBehaviour
 {
+
     public enum eType
     {
         Static,
@@ -34,6 +35,7 @@ public class Body : MonoBehaviour
 
     public void AddForce(Vector2 force, eForceMode forceMode = eForceMode.Force)
     {
+        if(type == eType.Static) return;
         switch (forceMode)
         {
             case eForceMode.Force:
@@ -53,6 +55,7 @@ public class Body : MonoBehaviour
 
     public void Step(float dt)
     {
+        if (type != eType.Dynamic) return;
         acceleration = World.Instance.Gravity + (force * inverseMass);
     }
 }

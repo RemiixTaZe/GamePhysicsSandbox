@@ -15,6 +15,8 @@ public static class Collision
                 Body bodyA = bodies[i];
                 Body bodyB = bodies[j];
 
+                if(bodyA.type == Body.eType.Static && bodyB.type == Body.eType.Static) continue;
+
                 Circle circleA = new Circle(bodyA.position, ((CircleShape)bodyA.shape).radius);
                 Circle circleB = new Circle(bodyB.position, ((CircleShape)bodyB.shape).radius);
 

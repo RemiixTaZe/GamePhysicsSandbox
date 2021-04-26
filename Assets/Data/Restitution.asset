@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05f99a0d29ce24848a488ada5830ba33, type: 3}
-  m_Name: FixedFps
+  m_Name: Restitution
   m_EditorClassIdentifier: 
-  value: 30
+  value: 0

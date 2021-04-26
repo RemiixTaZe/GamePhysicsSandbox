@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05f99a0d29ce24848a488ada5830ba33, type: 3}
-  m_Name: FixedFps
+  m_Script: {fileID: 11500000, guid: adac3746d9dbdc446b8fd3ebf1d6def1, type: 3}
+  m_Name: Wrap
   m_EditorClassIdentifier: 
-  value: 30
+  value: 1

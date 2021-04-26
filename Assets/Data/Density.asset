@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f99a0d29ce24848a488ada5830ba33, type: 3}
   m_Name: Density
   m_EditorClassIdentifier: 
-  value: 0
+  value: 0.5

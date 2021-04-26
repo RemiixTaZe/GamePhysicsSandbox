@@ -9,6 +9,8 @@ public class Creator : Action
     public FloatData damping;
     public FloatData size;
     public FloatData density;
+    public FloatData restitution;
+    public BodyEnumData bodyType;
 
 
     bool action { get; set; } = false;
@@ -24,12 +26,13 @@ public class Creator : Action
             GameObject gameobject = Instantiate(original, position, Quaternion.identity);
             if(gameobject.TryGetComponent<Body>(out Body body))
             {
-                Vector2 force = Random.insideUnitSphere.normalized * speed;
-
-                body.AddForce(force, Body.eForceMode.Velocity);
-                body.damping = damping; ;
                 body.shape.size = size;
                 body.shape.density = density;
+                body.damping = damping;
+                body.restitution = restitution;
+                body.type = (Body.eType)bodyType.value;
+                Vector2 force = Random.insideUnitSphere.normalized * speed;
+                body.AddForce(force, Body.eForceMode.Velocity);
                 World.Instance.bodies.Add(body);
             }
         }
