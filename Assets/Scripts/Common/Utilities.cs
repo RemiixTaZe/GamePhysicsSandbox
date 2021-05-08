@@ -22,4 +22,18 @@ public static class Utilities
 
         return (x * -k) * direction.normalized;
     }
+
+    public static Body GetBodyFromPosition(Vector2 position)
+    {
+        Body body = null;
+
+        Ray ray = Camera.main.ScreenPointToRay(position);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
+        if (hit.collider)
+        {
+            body = hit.collider.gameObject.GetComponent<Body>();
+        }
+
+        return body;
+    }
 }

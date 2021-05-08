@@ -12,6 +12,8 @@ public class Creator : Action
     public FloatData restitution;
     public BodyEnumData bodyType;
 
+    public override eActionType actionType => eActionType.Connector;
+
 
     bool action { get; set; } = false;
     bool onetime { get; set; } = false;
