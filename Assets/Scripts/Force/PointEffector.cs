@@ -14,7 +14,7 @@ public class PointEffector : Force
         Circle circleA = new Circle(position, shape.radius); Circle circleB = new Circle(body.position, body.shape.size /2);
         if (circleA.Contains(circleB))
         {
-            Vector2 direction = position - body.position;
+            Vector2 direction = body.position - position;
             float distance = direction.magnitude; 
             float t = distance / shape.size; 
             Vector2 force = direction.normalized;
